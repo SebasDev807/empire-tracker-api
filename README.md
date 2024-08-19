@@ -4,6 +4,7 @@
 
 
 ## Description
+Api rest creada para la integración de la aplicación creada en angular
 
 [Nest](https://github.com/nestjs/nest) Repositorio de Nest
 
