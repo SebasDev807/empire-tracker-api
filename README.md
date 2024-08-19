@@ -5,12 +5,12 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+[Nest](https://github.com/nestjs/nest) Repositorio de Nest
 
-## Instala las dependencias
+## Asegurate de tener NestCli instalado
 
 ```bash
-$ yarn install
+$ npm install -g @nestjs/cli
 ```
 
 ## Instala las dependencias
