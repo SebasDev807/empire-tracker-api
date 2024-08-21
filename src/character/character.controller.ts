@@ -1,7 +1,6 @@
 import { Controller, Get, Param, Query } from '@nestjs/common';
 import { CharacterService } from './character.service';
 
-import { ToApiParam } from 'src/to-api-param/to-api-param.pipe';
 import { PaginationDto } from 'src/common/dto/pagination.dto';
 
 @Controller('characters')
@@ -15,7 +14,7 @@ export class CharacterController {
   }
 
   @Get(':term')
-  findAny(@Param('term', ToApiParam) term: string) {
+  findAny(@Param('term') term: string) {
     return this.characterService.findAny(term);
   }
 

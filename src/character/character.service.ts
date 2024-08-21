@@ -4,6 +4,7 @@ import { Character } from './entities/character.entity';
 import { InjectModel } from '@nestjs/mongoose';
 import { PaginationDto } from 'src/common/dto/pagination.dto';
 
+
 @Injectable()
 export class CharacterService {
 
@@ -31,6 +32,7 @@ export class CharacterService {
     let characters: Character[];
     
     try {
+      console.log(term);
       
       const regex = { $regex: term, $options: 'i' }
 
@@ -46,10 +48,6 @@ export class CharacterService {
 
       if (!characters.length) {
         throw new NotFoundException(`Character with term '${term}' not found.`);
-      }
-
-      if (characters.length === 1) {
-        return characters[0];
       }
 
       return characters;
